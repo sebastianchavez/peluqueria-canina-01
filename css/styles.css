@@ -108,8 +108,8 @@ body {
   display: inline-block;
 }
 
-/* Desktop (>= 2xl / 1536px): mostrar nav-links, ocultar menu toggle */
-@media (min-width: 1536px) {
+/* Desktop (>= lg / 1024px): mostrar nav-links, ocultar menu toggle */
+@media (min-width: 1024px) {
   .navbar-nav-links {
     display: flex;
   }
