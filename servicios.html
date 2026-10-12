@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios · Paw Spa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Poppins', 'sans-serif'] }, colors: { primary: '#f59e0b', 'primary-dark': '#d97706', secondary: '#3b82f6', accent: '#10b981' } } }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <div id="navbar-mount"></div>
+
+  <!-- Hero servicios -->
+  <section class="hero" style="min-height: 50vh; background-image: linear-gradient(135deg, rgba(245, 158, 11, 0.85), rgba(59, 130, 246, 0.7)), url('https://placedog.net/1920/1080?id=100');">
+    <div class="container mx-auto px-6 hero-content text-white text-center">
+      <span class="inline-block px-4 py-1 bg-white/20 backdrop-blur rounded-full text-sm font-medium mb-6 animate-bounce-in">Nuestros servicios</span>
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Todo lo que tu <span class="text-amber-300">peludo</span> necesita</h1>
+      <p class="text-xl max-w-2xl mx-auto text-white/90">8 servicios premium para que tu perro luzca, huela y se sienta increíble.</p>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="servicios-container"></div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <span class="text-primary font-semibold uppercase tracking-wider">Cómo trabajamos</span>
+        <h2 class="text-4xl font-bold mt-2">Nuestro <span class="gradient-text">proceso</span></h2>
+      </div>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-2xl text-center animate-on-scroll card-hover">
+          <div class="w-16 h-16 mx-auto mb-4 bg-amber-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">1</div>
+          <h4 class="font-bold mb-2">Reserva</h4>
+          <p class="text-sm text-gray-600">Reservas online, telefónica o por WhatsApp. Eliges día y hora.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl text-center animate-on-scroll card-hover">
+          <div class="w-16 h-16 mx-auto mb-4 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">2</div>
+          <h4 class="font-bold mb-2">Evaluación</h4>
+          <p class="text-sm text-gray-600">Analizamos el tipo de pelo, piel y temperamento de tu perro.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl text-center animate-on-scroll card-hover">
+          <div class="w-16 h-16 mx-auto mb-4 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">3</div>
+          <h4 class="font-bold mb-2">Servicio</h4>
+          <p class="text-sm text-gray-600">Servicio personalizado con cariño y profesionalismo.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl text-center animate-on-scroll card-hover">
+          <div class="w-16 h-16 mx-auto mb-4 bg-purple-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">4</div>
+          <h4 class="font-bold mb-2">Entrega</h4>
+          <p class="text-sm text-gray-600">Te lo entregamos feliz, limpio y oliendo increíble.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tamaños -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <span class="text-primary font-semibold uppercase tracking-wider">Trabajamos con todas las tallas</span>
+        <h2 class="text-4xl font-bold mt-2 mb-4">Desde <span class="gradient-text">chihuahuas</span> hasta gran daneses</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Cada perro tiene necesidades únicas. Adaptamos nuestros servicios a cualquier tamaño.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6" id="tamanios-container"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <div class="text-center mb-12 animate-on-scroll">
+        <span class="text-primary font-semibold uppercase tracking-wider">Preguntas frecuentes</span>
+        <h2 class="text-4xl font-bold mt-2">¿Tienes <span class="gradient-text">dudas</span>?</h2>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden" id="faq-container"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-gradient-to-r from-amber-500 to-blue-500 text-white text-center">
+    <div class="container mx-auto px-6 animate-on-scroll">
+      <h2 class="text-4xl font-bold mb-4">Reserva el servicio perfecto para tu peludo</h2>
+      <p class="text-xl mb-6">Te ayudamos a elegir el plan ideal según raza, edad y tamaño.</p>
+      <a href="contacto.html" class="inline-block bg-white text-amber-600 px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">📅 Reservar ahora</a>
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/partials.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('navbar-mount').innerHTML = PARTIALS.NAVBAR('servicios');
+    document.getElementById('footer-mount').innerHTML = PARTIALS.FOOTER();
+
+    // Render servicios
+    document.getElementById('servicios-container').innerHTML = DATA.servicios.map(s => `
+      <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-on-scroll border border-gray-100">
+        <div class="service-icon mb-4">${s.icon}</div>
+        <h3 class="text-xl font-bold mb-3">${s.title}</h3>
+        <p class="text-gray-600 mb-4">${s.description}</p>
+        <div class="space-y-2 pt-4 border-t border-gray-100">
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-500">⏱ Duración</span>
+            <span class="font-medium">${s.duration}</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-gray-500">💰 Precio</span>
+            <span class="font-bold text-primary text-lg">Desde $${s.desde.toLocaleString('es-CL')} CLP</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Tamaños
+    document.getElementById('tamanios-container').innerHTML = DATA.tamanios.map(t => `
+      <div class="bg-gradient-to-br from-amber-50 to-blue-50 p-6 rounded-2xl text-center card-hover animate-on-scroll">
+        <div class="text-5xl mb-3">${t.icon}</div>
+        <h4 class="font-bold text-lg">${t.label}</h4>
+        <p class="text-sm text-gray-600">${t.desc}</p>
+      </div>
+    `).join('');
+
+    // FAQ
+    document.getElementById('faq-container').innerHTML = DATA.faqs.map((f, i) => `
+      <div class="faq-item ${i === 0 ? 'open' : ''}">
+        <button class="faq-question">
+          ${f.pregunta}
+          <span class="icon text-primary">+</span>
+        </button>
+        <div class="faq-answer">${f.respuesta}</div>
+      </div>
+    `).join('');
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

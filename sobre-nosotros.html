@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros · Paw Spa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Poppins', 'sans-serif'] }, colors: { primary: '#f59e0b', 'primary-dark': '#d97706', secondary: '#3b82f6', accent: '#10b981' } } }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <div id="navbar-mount"></div>
+
+  <!-- Hero sobre nosotros -->
+  <section class="hero" style="min-height: 60vh; background-image: linear-gradient(135deg, rgba(245, 158, 11, 0.85), rgba(59, 130, 246, 0.7)), url('https://placedog.net/1920/1080?id=40');">
+    <div class="container mx-auto px-6 hero-content text-white text-center">
+      <span class="inline-block px-4 py-1 bg-white/20 backdrop-blur rounded-full text-sm font-medium mb-6 animate-bounce-in">Sobre nosotros</span>
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Conoce a <span class="text-amber-300">Paw Spa</span></h1>
+      <p class="text-xl max-w-2xl mx-auto text-white/90">Pasión por los perros, compromiso con su bienestar, dedicación en cada detalle.</p>
+    </div>
+  </section>
+
+  <!-- Nuestra historia -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="animate-on-scroll order-2 md:order-1">
+        <span class="text-primary font-semibold uppercase tracking-wider">Nuestra historia</span>
+        <h2 class="text-4xl font-bold mt-2 mb-6">15 años de <span class="gradient-text">amor canino</span></h2>
+        <p class="text-gray-600 mb-4">Todo comenzó en 2009, cuando Laura, nuestra fundadora, decidió convertir su pasión por los perros en algo más grande. Lo que empezó como un pequeño rincón en el garaje de su casa, se ha convertido hoy en el centro de estética canina de referencia en Madrid.</p>
+        <p class="text-gray-600 mb-4">A lo largo de estos años, hemos atendido a más de 1.250 mascotas y hemos ampliado nuestros servicios para cubrir todas las necesidades de los peludos: baño, corte, spa, adiestramiento y mucho más.</p>
+        <p class="text-gray-600">Pero nuestra filosofía sigue siendo la misma de aquel primer día: <strong>tratar a cada mascota como si fuera nuestra propia familia</strong>.</p>
+      </div>
+      <div class="animate-on-scroll order-1 md:order-2">
+        <img src="https://placedog.net/600/600?id=50" alt="Perros felices" class="rounded-2xl shadow-2xl" onerror="this.src='https://placehold.co/600x600/3b82f6/ffffff?text=🐶+Nuestro+Equipo&font=poppins'">
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión, Visión, Valores -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-4xl font-bold">Lo que nos <span class="gradient-text">define</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-on-scroll text-center">
+          <div class="w-20 h-20 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center text-4xl">🎯</div>
+          <h3 class="text-2xl font-bold mb-3">Misión</h3>
+          <p class="text-gray-600">Ofrecer un cuidado integral de las mascotas, garantizando su bienestar, salud y felicidad a través de servicios profesionales y cariñosos.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-on-scroll text-center">
+          <div class="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center text-4xl">👁️</div>
+          <h3 class="text-2xl font-bold mb-3">Visión</h3>
+          <p class="text-gray-600">Ser el centro de referencia en Madrid donde cada mascota reciba un servicio premium personalizado, basado en respeto y amor.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-on-scroll text-center">
+          <div class="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center text-4xl">💎</div>
+          <h3 class="text-2xl font-bold mb-3">Valores</h3>
+          <p class="text-gray-600">Empatía, profesionalismo, respeto animal, sostenibilidad y aprendizaje continuo. Esto define cada cosa que hacemos.</p>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="valores-container"></div>
+    </div>
+  </section>
+
+  <!-- Equipo -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <span class="text-primary font-semibold uppercase tracking-wider">Nuestro equipo</span>
+        <h2 class="text-4xl font-bold mt-2 mb-4">Las personas detrás de <span class="gradient-text">Paw Spa</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Profesionales certificados, amantes de los animales, listos para cuidar a tu mejor amigo.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8" id="equipo-container"></div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section bg-gradient-to-br from-amber-50 to-blue-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <span class="text-primary font-semibold uppercase tracking-wider">Nuestra trayectoria</span>
+        <h2 class="text-4xl font-bold mt-2">Hitos que nos <span class="gradient-text">enorgullecen</span></h2>
+      </div>
+      <div class="timeline max-w-4xl mx-auto" id="timeline-container"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-gradient-to-r from-amber-500 to-blue-500 text-white text-center">
+    <div class="container mx-auto px-6 animate-on-scroll">
+      <h2 class="text-4xl font-bold mb-4">Ven a conocernos</h2>
+      <p class="text-xl mb-6">Pide una visita gratuita a nuestras instalaciones</p>
+      <a href="contacto.html" class="inline-block bg-white text-amber-600 px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">📞 Contactar</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-mount"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/partials.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('navbar-mount').innerHTML = PARTIALS.NAVBAR('sobre-nosotros');
+    document.getElementById('footer-mount').innerHTML = PARTIALS.FOOTER();
+
+    // Valores
+    document.getElementById('valores-container').innerHTML = DATA.valores.map(v => `
+      <div class="bg-white p-6 rounded-xl shadow card-hover animate-on-scroll">
+        <div class="text-4xl mb-3">${v.icon}</div>
+        <h4 class="font-bold mb-2">${v.titulo}</h4>
+        <p class="text-sm text-gray-600">${v.desc}</p>
+      </div>
+    `).join('');
+
+    // Equipo
+    document.getElementById('equipo-container').innerHTML = DATA.equipo.map(p => `
+      <div class="text-center animate-on-scroll card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+        <div class="aspect-square overflow-hidden">
+          <img src="${p.img}" alt="${p.nombre}" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h4 class="font-bold text-lg">${p.nombre}</h4>
+          <p class="text-primary text-sm font-semibold">${p.rol}</p>
+          <p class="text-gray-500 text-xs mt-1">${p.experiencia} de experiencia</p>
+        </div>
+      </div>
+    `).join('');
+
+    // Timeline
+    document.getElementById('timeline-container').innerHTML = DATA.hitos.map(h => `
+      <div class="timeline-item animate-on-scroll">
+        <div class="bg-white p-6 rounded-xl shadow-lg inline-block">
+          <span class="text-primary font-bold text-xl">${h.anio}</span>
+          <h4 class="font-bold mt-2 mb-1">${h.titulo}</h4>
+          <p class="text-sm text-gray-600">${h.descripcion}</p>
+        </div>
+      </div>
+    `).join('');
+  </script>
+</body>
+</html>

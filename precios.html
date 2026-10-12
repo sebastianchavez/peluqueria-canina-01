@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios · Paw Spa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Poppins', 'sans-serif'] }, colors: { primary: '#f59e0b', 'primary-dark': '#d97706', secondary: '#3b82f6', accent: '#10b981' } } }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <div id="navbar-mount"></div>
+
+  <!-- Hero precios -->
+  <section class="hero" style="min-height: 50vh; background-image: linear-gradient(135deg, rgba(245, 158, 11, 0.85), rgba(59, 130, 246, 0.7)), url('https://placedog.net/1920/1080?id=90');">
+    <div class="container mx-auto px-6 hero-content text-white text-center">
+      <span class="inline-block px-4 py-1 bg-white/20 backdrop-blur rounded-full text-sm font-medium mb-6 animate-bounce-in">Precios transparentes</span>
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Planes para cada <span class="text-amber-300">bolsillo</span></h1>
+      <p class="text-xl max-w-2xl mx-auto text-white/90">Sin sorpresas. Elige el plan ideal para tu peludo.</p>
+    </div>
+  </section>
+
+  <!-- Tabla de precios -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <span class="text-primary font-semibold uppercase tracking-wider">Nuestros precios</span>
+        <h2 class="text-4xl font-bold mt-2 mb-4">Por tamaño y <span class="gradient-text">servicio</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Tarifas claras según el porte de tu perro. Todos los precios incluyen IVA.</p>
+      </div>
+
+      <div class="overflow-x-auto animate-on-scroll">
+        <table class="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+          <thead class="bg-gradient-to-r from-amber-500 to-blue-500 text-white">
+            <tr>
+              <th class="p-6 text-left">Servicio</th>
+              <th class="p-6 text-center">🐕<br><span class="text-sm">Pequeño</span><br><span class="text-xs opacity-80">Hasta 10 kg</span></th>
+              <th class="p-6 text-center">🦮<br><span class="text-sm">Mediano</span><br><span class="text-xs opacity-80">10-20 kg</span></th>
+              <th class="p-6 text-center">🐕‍🦺<br><span class="text-sm">Grande</span><br><span class="text-xs opacity-80">20-35 kg</span></th>
+              <th class="p-6 text-center">🐶<br><span class="text-sm">Gigante</span><br><span class="text-xs opacity-80">+35 kg</span></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200" id="precios-tabla"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paquetes -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <span class="text-primary font-semibold uppercase tracking-wider">Paquetes combinados</span>
+        <h2 class="text-4xl font-bold mt-2">Más barato en <span class="gradient-text">pack</span></h2>
+        <p class="text-gray-600 mt-2">Combina servicios y ahorra.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8" id="paquetes-container"></div>
+    </div>
+  </section>
+
+  <!-- Suscripciones -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <span class="text-primary font-semibold uppercase tracking-wider">Suscripciones mensuales</span>
+        <h2 class="text-4xl font-bold mt-2 mb-2">Mantén a tu perro <span class="gradient-text">siempre impecable</span></h2>
+        <p class="text-gray-600">Sin olvidos ni agobios. Nos encargamos de todo.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white border-2 border-gray-200 p-8 rounded-2xl text-center animate-on-scroll card-hover">
+          <h3 class="text-2xl font-bold mb-2">🐕 Mini</h3>
+          <p class="text-gray-500 mb-4">Ideal para mantener limpio</p>
+          <div class="text-5xl font-extrabold text-primary mb-2">$28.000</div>
+          <p class="text-sm text-gray-500 mb-6">CLP / mes</p>
+          <ul class="text-left space-y-2 mb-6 text-sm">
+            <li>✓ 2 baños al mes</li>
+            <li>✓ Corte de uñas</li>
+            <li>✓ Limpieza de oídos</li>
+          </ul>
+          <a href="contacto.html" class="block bg-gray-100 text-gray-800 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Suscribirme</a>
+        </div>
+
+        <div class="bg-gradient-to-br from-amber-500 to-blue-500 text-white p-8 rounded-2xl text-center animate-on-scroll card-hover transform md:scale-105 shadow-2xl relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-amber-900 px-4 py-1 rounded-full text-sm font-bold">MÁS POPULAR</div>
+          <h3 class="text-2xl font-bold mb-2">⭐ Standard</h3>
+          <p class="opacity-90 mb-4">El más equilibrado</p>
+          <div class="text-5xl font-extrabold mb-2">$45.000</div>
+          <p class="text-sm opacity-80 mb-6">CLP / mes</p>
+          <ul class="text-left space-y-2 mb-6 text-sm">
+            <li>✓ 4 baños al mes</li>
+            <li>✓ 1 corte completo</li>
+            <li>✓ Tratamiento antipulgas</li>
+            <li>✓ 10% dto. servicios extra</li>
+          </ul>
+          <a href="contacto.html" class="block bg-white text-amber-600 py-3 rounded-full font-semibold hover:scale-105 transition-transform">Suscribirme</a>
+        </div>
+
+        <div class="bg-white border-2 border-gray-200 p-8 rounded-2xl text-center animate-on-scroll card-hover">
+          <h3 class="text-2xl font-bold mb-2">👑 VIP</h3>
+          <p class="text-gray-500 mb-4">Sin preocupaciones</p>
+          <div class="text-5xl font-extrabold text-primary mb-2">$99.000</div>
+          <p class="text-sm text-gray-500 mb-6">CLP / mes</p>
+          <ul class="text-left space-y-2 mb-6 text-sm">
+            <li>✓ Visitas ilimitadas</li>
+            <li>✓ Spa completo mensual</li>
+            <li>✓ Recogida a domicilio</li>
+            <li>✓ Adiestramiento incluido</li>
+          </ul>
+          <a href="contacto.html" class="block bg-gray-100 text-gray-800 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Suscribirme</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ precios -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-4xl font-bold">Preguntas sobre <span class="gradient-text">precios</span></h2>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="faq-item open">
+          <button class="faq-question">¿Cómo sé qué tamaño es mi perro? <span class="icon text-primary">+</span></button>
+          <div class="faq-answer">Lo determinamos por su peso. Pequeño: hasta 10 kg. Mediano: 10-20 kg. Grande: 20-35 kg. Gigante: más de 35 kg. Si tienes dudas, pídenos una evaluación gratuita.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Hay descuentos por múltiples mascotas? <span class="icon text-primary">+</span></button>
+          <div class="faq-answer">Sí. Si traes a 2 o más perros juntos, aplicamos un 15% de descuento en cada uno. Ideal para familias multican.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Los productos están incluidos? <span class="icon text-primary">+</span></button>
+          <div class="faq-answer">Sí, todos los productos están incluidos: champús, acondicionadores, perfumes, esmaltes. Si prefieres traer tu propio champú por sensibilidad, háznoslo saber.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Aceptáis métodos de pago? <span class="icon text-primary">+</span></button>
+          <div class="faq-answer">Efectivo, tarjeta, Webpay, transferencia bancaria y Mercado Pago. Las suscripciones se cobrarán mensualmente vía Webpay o transferencia automática.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-gradient-to-r from-amber-500 to-blue-500 text-white text-center">
+    <div class="container mx-auto px-6 animate-on-scroll">
+      <h2 class="text-4xl font-bold mb-4">¿Aún con dudas?</h2>
+      <p class="text-xl mb-6">Te asesoramos sin compromiso. Llámanos o escríbenos por WhatsApp.</p>
+      <a href="contacto.html" class="inline-block bg-white text-amber-600 px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">📞 Contactar</a>
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/partials.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('navbar-mount').innerHTML = PARTIALS.NAVBAR('precios');
+    document.getElementById('footer-mount').innerHTML = PARTIALS.FOOTER();
+
+    // Tabla de precios
+    const serviciosTabla = [DATA.precios.banio, DATA.precios.corte, DATA.precios.spa];
+    const fmt = n => '$' + n.toLocaleString('es-CL');
+    document.getElementById('precios-tabla').innerHTML = serviciosTabla.map(s => `
+      <tr class="hover:bg-amber-50 transition">
+        <td class="p-6 font-semibold">${s.titulo}</td>
+        <td class="p-6 text-center font-bold text-amber-600 text-xl">${fmt(s.pequena)}</td>
+        <td class="p-6 text-center font-bold text-amber-600 text-xl">${fmt(s.mediana)}</td>
+        <td class="p-6 text-center font-bold text-amber-600 text-xl">${fmt(s.grande)}</td>
+        <td class="p-6 text-center font-bold text-amber-600 text-xl">${fmt(s.gigante)}</td>
+      </tr>
+    `).join('');
+
+    // Paquetes
+    document.getElementById('paquetes-container').innerHTML = DATA.precios.paquetes.map((p, i) => `
+      <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-on-scroll ${i === 1 ? 'border-2 border-amber-500 relative' : ''}">
+        ${i === 1 ? '<div class="absolute -top-4 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold">RECOMENDADO</div>' : ''}
+        <h3 class="text-2xl font-bold mb-2">${p.nombre}</h3>
+        <span class="inline-block bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">${p.descuento}</span>
+        <p class="text-gray-600 mb-4">${p.descripcion}</p>
+        <div class="text-5xl font-extrabold text-primary mb-6">${fmt(p.precio)}</div>
+        <a href="contacto.html" class="block bg-amber-500 text-white text-center py-3 rounded-full font-semibold hover:bg-amber-600 transition">Contratar</a>
+      </div>
+    `).join('');
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
