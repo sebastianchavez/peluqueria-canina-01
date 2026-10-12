@@ -19,6 +19,7 @@
           <a href="precios.html" class="navbar-link font-medium ${activePage === 'precios' ? 'active' : ''}">Precios</a>
           <a href="horarios.html" class="navbar-link font-medium ${activePage === 'horarios' ? 'active' : ''}">Clases</a>
           <a href="contacto.html" class="navbar-link font-medium ${activePage === 'contacto' ? 'active' : ''}">Contacto</a>
+          <a href="contacto.html" class="navbar-cta btn-primary cta-pulse">📅 Reservar</a>
         </div>
         <div class="flex items-center gap-2 flex-shrink-0">
           <button class="navbar-menu-toggle menu-toggle text-xl sm:text-2xl text-gray-800" aria-label="Menú">☰</button>

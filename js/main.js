@@ -57,27 +57,6 @@
     waitForNavbar();
   }
 
-  // ====== Navbar responsive (mostrar/ocultar según viewport) ======
-  function initResponsiveNavbar() {
-    const navLinks = document.querySelector('.navbar-nav-links');
-    const menuToggle = document.querySelector('.navbar-menu-toggle');
-    if (!navLinks && !menuToggle) return;
-
-    const updateDisplay = () => {
-      // Solo mostrar nav-links en pantallas MUY grandes (>= 1536px / 2xl)
-      const isDesktop = window.innerWidth >= 1536;
-      if (navLinks) {
-        navLinks.style.setProperty('display', isDesktop ? 'flex' : 'none', 'important');
-      }
-      if (menuToggle) {
-        menuToggle.style.setProperty('display', isDesktop ? 'none' : 'inline-block', 'important');
-      }
-    };
-
-    updateDisplay();
-    window.addEventListener('resize', updateDisplay, { passive: true });
-  }
-
   // ====== Mobile menu toggle ======
   function initMobileMenu() {
     const toggle = document.querySelector('.menu-toggle');
@@ -236,7 +215,6 @@
   // ====== Init todo ======
   function init() {
     initNavbar();
-    initResponsiveNavbar();
     initMobileMenu();
     initScrollAnimations();
     initCounters();

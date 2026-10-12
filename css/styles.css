@@ -101,11 +101,22 @@ body {
 
 /* Default (móvil): ocultar nav-links, mostrar menu toggle */
 .navbar-nav-links {
-  display: none !important;
+  display: none;
 }
 
 .navbar-menu-toggle {
-  display: inline-block !important;
+  display: inline-block;
+}
+
+/* Desktop (>= 2xl / 1536px): mostrar nav-links, ocultar menu toggle */
+@media (min-width: 1536px) {
+  .navbar-nav-links {
+    display: flex;
+  }
+
+  .navbar-menu-toggle {
+    display: none;
+  }
 }
 
 .navbar-cta {
